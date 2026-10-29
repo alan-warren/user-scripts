@@ -1,5 +1,7 @@
 function setFavicon(url) {
+    console.log("[MyMonkey] Setting timeout for favicon");
     setTimeout(() => {
+        console.log("[MyMonkey] setFavicon timeout executing");
         // Try to find the existing favicon link tag
         let link = document.querySelector("link[rel*='icon']");
 
@@ -16,6 +18,7 @@ function setFavicon(url) {
 }
 
 function setEmojiFavicon(emoji) {
+    console.log(`[MyMonkey] setEmojiFavicon to ${emoji}`);
     const svgIcon = `data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y="0.9em" x="-0.1em" font-size="90">${emoji}</text></svg>`;
     setFavicon(svgIcon);
 }
