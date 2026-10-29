@@ -1,15 +1,18 @@
 function setFavicon(url) {
-    // Try to find the existing favicon link tag
-    let link = document.querySelector("link[rel*='icon']");
+    setTimeout(() => {
+        // Try to find the existing favicon link tag
+        let link = document.querySelector("link[rel*='icon']");
 
-    // If it doesn't exist, create a new one
-    if (!link) {
-        link = document.createElement("link");
-        link.rel = "icon";
-        document.head.appendChild(link);
-    }
+        // If it doesn't exist, create a new one
+        if (!link) {
+            link = document.createElement("link");
+            link.rel = "icon";
+            document.head.appendChild(link);
+        }
 
-    link.href = url;
+        link.href = url;
+    }, 300);
+
 }
 
 function setEmojiFavicon(emoji) {
